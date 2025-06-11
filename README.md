@@ -1,29 +1,119 @@
-# Create T3 App
+# TechTales
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+TechTales is a modern web application built with Next.js, Tailwind CSS, and powered by Contentstack CMS for content management.
 
-## What's next? How do I make an app with this?
+## Tech Stack
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+This project uses the following technologies:
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- **[Next.js](https://nextjs.org)** - React framework for production
+- **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS framework
+- **[Contentstack](https://www.contentstack.com)** - Headless CMS for content management
+- **[TypeScript](https://www.typescriptlang.org)** - Type-safe JavaScript
+- **[Biome](https://biomejs.dev)** - Fast formatter and linter
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Getting Started
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) (version 18 or later) and [Bun](https://bun.sh/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repository-url>
+cd TechTales
+```
+
+2. Install dependencies:
+
+```bash
+bun install
+```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add your Contentstack credentials:
+
+```env
+# Contentstack Configuration
+CONTENTSTACK_API_KEY=your_api_key_here
+CONTENTSTACK_DELIVERY_TOKEN=your_delivery_token_here
+CONTENTSTACK_ENVIRONMENT=your_environment_here
+```
+
+### Running the Application
+
+#### Development Mode
+
+```bash
+bun run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+#### Production Build
+
+```bash
+bun run build
+bun run start
+```
+
+#### Preview Build
+
+```bash
+bun run preview
+```
+
+### Additional Scripts
+
+- `bun run typecheck` - Run TypeScript type checking
+- `bun run check` - Run Biome linter and formatter checks
+- `bun run check:write` - Auto-fix linting and formatting issues
+- `bun run check:unsafe` - Apply unsafe auto-fixes
+
+## Project Structure
+
+```
+src/
+├── app/          # Next.js app directory
+├── components/   # Reusable UI components
+├── lib/          # Utility functions and configurations
+└── styles/       # Global styles and Tailwind configurations
+```
+
+## Contentstack Setup
+
+This project uses Contentstack as a headless CMS. To set up content:
+
+1. Create a Contentstack account at [contentstack.com](https://www.contentstack.com)
+2. Create a new stack
+3. Get your API Key, Delivery Token, and Environment from the stack settings
+4. Add these credentials to your `.env.local` file
 
 ## Learn More
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+To learn more about the technologies used in this project:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Learn about utility-first CSS
+- [Contentstack Documentation](https://www.contentstack.com/docs) - Learn about headless CMS
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Contributing
 
-## How do I deploy this?
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Deployment
+
+This Next.js application can be deployed on various platforms:
+
+- **[Vercel](https://vercel.com)** (Recommended) - Zero-configuration deployment
+- **[Netlify](https://netlify.com)** - JAMstack deployment platform
+- **[AWS](https://aws.amazon.com)** - Cloud deployment with various services
+
+For Vercel deployment, simply connect your GitHub repository and Vercel will automatically deploy your application.
